@@ -1,0 +1,35 @@
+
+.slides {
+    position: relative;
+
+    &__arrow {
+    
+    }
+
+    &__dots {
+        
+    }
+}
+
+//sweetalert2
+.swal2-container {
+
+    .swal2-title {
+        
+    }
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+//Large devices (landscape tablets, 1200 and down)
+@media only screen and (max-width: $screen-lg) {}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {}
+
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}
