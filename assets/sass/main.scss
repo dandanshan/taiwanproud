@@ -4,14 +4,75 @@
 @import "helper";
 @import "widget";
 
+*  {
+    &:focus {
+        outline: 0;
+        box-shadow: 0;
+    }
+}
+
+h2 {
+    font-size: $font-size-42;
+    font-weight: $font-weight-bold;
+    margin: 0 0 30px 0;
+
+    &.dark {
+        color: $navy300;
+    }
+
+    &.light {
+        color: $green300;
+    }
+}
+
+h5 {
+    font-size: $font-size-32;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+
+    &.light {
+        color: $white;
+    }
+}
+
+p {
+    line-height: 1.5;
+
+    &.dark {
+        color: $black;
+    }
+
+    &.light {
+        color: $white;
+    }
+}
+
+.bg {
+    &--navy {
+        background: $navy300;;
+    }
+
+    &--gray {
+        background: $gray100;;
+    }
+
+    &--blue {
+        background: $navy200;;
+    }
+}
+
+img {
+    line-height: 1;
+}
+
 ::selection {
-    color: color(white);
-    background: color(navy300);
+    color: $white;
+    background: $navy300;
 }
 
 .container {
     position: relative;
-    text-align: center;
+    text-align: left;
 }
 
 .wrap {
@@ -23,30 +84,85 @@
     padding: 110px 0;
 }
 
+.slides {
+    &__media {
+        line-height: 0;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: $white;
+            opacity: 0;
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+            @include transition(all, .3s, ease);
+        }
+
+        > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+/* ==========================================================================
+   Header & Footer
+   ========================================================================== */
+
 .header {
     background: transparent;
     position: fixed;
     top: 0;
     z-index: 100;
     width: 100%;
+    padding-top: 40px;
+    @include transition(all, .3s, linear);
+
+    &.active {
+        padding-top: 0;
+
+        .header__logo {
+            width: 95px;
+		    height: 50px;
+            margin: 12px 0 16px 50px;
+        }
+    }
 
     &__logo {
         float: left;
-		width: 80px;
-		height: 80px;
-		background: url('../images/logo_ch@3x.png') 0 0/cover no-repeat;
+        margin: 4px 0 4px 50px;
+		width: 125px;
+		height: 70px;
+		background: url('../images/logo-ch-white@3x.png') 0 0/cover no-repeat;
 		float: left;
-		position: relative;
+        position: relative;
+        @include transition(all, .3s, linear);
     }
 
     .nav {
         float: right;
-        padding-right: 20px;
+        padding-right: 50px;
 
         .menu {
+            margin: 0;
+
             li {
                 display: inline-block;
                 font-size: $font-size-base;
+
+                > a {
+                    color: $white;
+                }
 
                 &.active {
                     .menu__name:before {
@@ -58,8 +174,8 @@
 
             &__name {
                 display: inline-block;
-                padding: 31px 12px;
-                color: color(white);
+                padding: 30px 12px;
+                color: $white;
                 position: relative;
             }
         }
@@ -67,6 +183,7 @@
 
     .burger {
         padding: 14px;
+        margin-right: 10px;
         float: right;
         cursor: pointer;
         display: none;
@@ -82,7 +199,7 @@
                 left: 0;
                 width: 100%;
                 height: 2px;
-                background-color: color(white);
+                background-color: $white;
                 border-radius: 2px;
                 @include rotate(0);
                 @include transition(all, .3s, ease);
@@ -133,30 +250,282 @@
 
 .footer {
 	@include list-reset;
-	background: color(navy300);
-	padding: 30px 0;
+	padding: 20px 0;
 	text-align: center;
-	color: color(white);
+	color: $white;
 
 	ul {
-		li {
+        @include list-reset;
+
+        li {
 			display: inline-block;
 			font-size: $font-size-base;
 			margin: 0 20px 15px 0;
 
 			a {
-				color: color(white);
+				color: $white;
 			}
 		}
 	}
 
 	p {
 		font-size: $font-size-14;
-		margin-bottom: 0;
+		margin: 0;
 	}
 }
 
+
+#goTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    mix-blend-mode: multiply;
+    @include scale(0);
+    @include transition(all, .6s, ease);
+
+    &.active {
+        @include scale(1);
+    }
+}
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
 #kv {
 	height: 100vh;
-	background: color(black);
+	background: $black;
 }
+
+#power {
+    position: relative;
+
+    h2, p {
+        padding-left: 70px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -99px;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        background: url('../images/bg-top_02.svg') no-repeat bottom left;
+        background-size: 100%;
+        z-index: 99;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -210px;
+        left: 0;
+        height: 210px;
+        width: 100%;
+        background: url('../images/bg-bottom_02.svg') no-repeat top left;
+        background-size: 100%;
+        z-index: 99;
+    }
+
+    .slides {
+        margin-top: 40px;
+
+        &__media {
+            padding-top: 50%;
+            width: calc(100% - 30px);
+            margin: 0 15px;
+            cursor: pointer;
+            position: relative;
+
+            &:before {
+                // content: '';
+                // display: block;
+                // width: 65px;
+                // height: 65px;
+                // z-index: 20;
+                // background: url('../images/icon-play@3x.png') no-repeat 0 0/cover;
+                // opacity: 1;
+                // position: absolute;
+                // margin: 0 auto;
+                // @include translateY(calc(200% + 32px))
+            }
+        }
+    }
+}
+
+#map {
+    padding: 320px;
+
+    h2, p {
+        text-align: center;
+    }
+}
+
+#card {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 195px;
+        left: 0;
+        height: 210px;
+        width: 100%;
+        background: url('../images/bg-top_01.svg') no-repeat bottom left;
+        background-size: 100%;
+        z-index: 99;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 200px;
+        width: 100%;
+        background: $navy300;
+        z-index: 99;
+    }
+}
+
+#motion {
+    .section__title {
+        width: 100%;
+        max-width: 790px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 790px;
+        height: 400px;
+        margin: 50px auto 0 auto;
+
+        iframe {
+            width: 100%;
+            max-width: 790px;
+            height: 400px;
+        }
+    }
+}
+
+#team {
+    padding: 10px 20px;
+    color: $white;
+    font-size: $font-size-14;
+    text-align: center;
+
+    span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+//Large devices (landscape tablets, 1200 and down)
+@media only screen and (max-width: $screen-lg) {
+    .mbonly {
+        display: block;
+    }
+
+    .pconly {
+        display: none;
+    }
+}
+
+//Medium devices (portrait tablets,landscape phone, 992 and down)
+@media only screen and (max-width: $screen-md) {
+    .header {
+        padding-top: 0;
+
+        &.active {
+            padding-top: 0;
+
+            .header__logo {
+                width: 70px;
+                height: 40px;
+                margin: 5px 0 5px 20px;
+            }
+        }
+
+        &__logo {
+            float: left;
+            margin: 5px 0 5px 20px;
+            width: 70px;
+            height: 40px;
+            background: url('./images/logo-ch-white@3x.png') 0 0/cover no-repeat;
+            float: left;
+            position: relative;
+            @include transition(all, .3s, linear);
+        }
+
+        .nav {
+            text-align: left;
+            padding-right: 0;
+            width: 100%;
+            height: 100vh;
+            float: inherit;
+            position: fixed;
+            background: $navy300;
+            left: 100vw;
+            @include transition(left, .6s, ease);
+
+            &.active {
+                left: 0;
+            }
+
+            .menu {
+                padding: 70px 35px;
+
+                li {
+                    display: block;
+                }
+
+                &__name {
+                    padding: 16px 0;
+                    width: 100%;
+                }
+
+                &__content {
+                    display: block;
+                    margin-bottom: 15px;
+
+                    li {
+                        display: inline-block;
+
+                        .btn {
+                            width: auto;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                &__highlight {
+
+                    &:before,
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+        .burger {
+            display: block;
+        }
+    }
+}
+
+//Small devices (landscape tablets, 768 and down)
+@media only screen and (max-width: $screen-sm) {}
+
+//XSmall devices (portrait phones, 576 and down)
+@media only screen and (max-width: $screen-xs) {}

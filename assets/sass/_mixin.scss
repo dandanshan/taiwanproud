@@ -1,7 +1,3 @@
-@mixin font-notoTC {
-	font-family: 'Roboto', 'Noto Serif TC', 'LiHei Pro  Medium', 'Microsoft JhengHei', Arial, sans-serif;
-}
-
 @mixin bg-img($url, $x, $y, $size) {
 	background-image: url($url);
 	background-position: $x $y;

@@ -1,13 +1,86 @@
-
+//slides
 .slides {
     position: relative;
 
     &__arrow {
-    
+        width: 44px;
+        height: 44px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 44px;
+            height: 44px;
+            z-index: 20;
+            background-size: 44px 176px;
+            background-position-x: 0;
+            background-image: url('../images/icon-slide-arrow@3x.png');
+            opacity: 1;
+        }
+
+        &--dp {
+            &:before {
+                background-position-y: 0;
+            }
+        }
+
+        &--dn {
+            &:before {
+                background-position-y: -44px;
+            }
+        }
+
+        &--lp {
+            &:before {
+                background-position-y: -88px;
+            }
+        }
+
+        &--ln {
+            &:before {
+                background-position-y: -132px;
+            }
+        }
+
+    }
+
+    &--video {
+        padding: 0 55px;
+
+        .slick-prev {
+            left: 0;
+        }
+
+        .slick-next {
+            right: 0;
+        }
     }
 
     &__dots {
-        
+        margin: 0;
+
+        li {
+            margin: 0 7px;
+            width: 30px;
+            height: 3px;
+
+            button {
+                background: $navy200;
+                width: 30px;
+                height: 3px;
+                padding: 0;
+
+                &:before {
+                    content: none;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background: $yellow300;
+                }
+            }
+        }
     }
 }
 
@@ -15,7 +88,7 @@
 .swal2-container {
 
     .swal2-title {
-        
+
     }
 }
 

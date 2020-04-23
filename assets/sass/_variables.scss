@@ -1,18 +1,15 @@
 //color
-$colors: (
-    white: #ffffff,
-    black: #3d3d3d,
-    navy300: #254460,
-    olive300: #4d724d,
-    yellow300: #f6b633,
-    aqua300: #54cada,
-    green300: #cbecc6,
-    gray100: #f6f6f6,
-);
+$white: #ffffff;
+$black: #3d3d3d;
+$navy300: #254460;
+$navy200: #7897b4;
+$navy100: #d7dee4;
+$olive300: #4d724d;
+$yellow300: #f6b633;
+$aqua300: #54cada;
+$green300: #cbecc6;
+$gray100: #f6f6f6;
 
-@function color($color-name) {
-    @return map-get($colors, $color-name);
-}
 
 $font-size-base: 1rem !default;
 $font-size-14: 0.875rem !default;

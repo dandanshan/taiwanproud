@@ -152,205 +152,27 @@
     }
 }
 
-%icon-about {
-
-    &:before,
-    &:after {
-        @include wh-square(210px);
-        background-image: url('../images/forum/img_desc@3x.png');
-        background-size: 210px 1260px;
-        background-position-x: 0;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-.icon__about {
-    @extend %icon-about;
-    line-height: 1.5;
-    margin-top: 40px;
-
-    .icon__text {
-        margin: 10px 0;
-        color: forum(blue500);
-        font-weight: $font-weight-bold;
-        font-size: $font-size-24;
-    }
-
-    &--news {
-
-        &:before,
-        &:after {
-            background-position-y: 0;
-        }
-    }
-
-    &--talk {
-
-        &:before,
-        &:after {
-            background-position-y: -210px;
-        }
-    }
-
-    &--plan {
-
-        &:before,
-        &:after {
-            background-position-y: -420px;
-        }
-    }
-
-    &--download {
-
-        &:before,
-        &:after {
-            background-position-y: -630px;
-        }
-    }
-}
-
-%icon-promote {
-
-    &:before,
-    &:after {
-        @include wh-square(300px);
-        background-image: url('../images/forum/img_desc@3x.png');
-        background-size: 300px 1800px;
-        background-position-x: 0;
-        margin: 0 auto;
-        display: block;
-    }
-}
-
-.icon__promote {
-    @extend %icon-promote;
-    line-height: 1.5;
-
-    &--edm {
-
-        &:before,
-        &:after {
-            background-position-y: -1200px;
-        }
-    }
-
-    &--content {
-
-        &:before,
-        &:after {
-            background-position-y: -1500px;
-        }
-    }
-}
-
-%icon-traffic {
-    position: relative;
-
-    &:before,
-    &:after {
-        @include wh-square(44px);
-        background-image: url('../images/forum/icon_traffic@3x.png');
-        background-size: 44px 176px;
-        background-position-x: 0;
-        display: block;
-        position: absolute;
-        left: 0;
-    }
-}
-
-.icon__traffic {
-    @extend %icon-traffic;
-
-    &--bus {
-
-        &:before,
-        &:after {
-            background-position-y: 0;
-        }
-    }
-
-    &--mrt {
-
-        &:before,
-        &:after {
-            background-position-y: -44px;
-        }
-    }
-
-    &--train {
-
-        &:before,
-        &:after {
-            background-position-y: -88px;
-        }
-    }
-
-    &--car {
-
-        &:before,
-        &:after {
-            background-position-y: -132px;
-        }
-    }
-}
-
-%icon-ticket {
-
-    &:before,
-    &:after {
-        width: 110px;
-        height: 170px;
-        background-image: url('../images/forum/img_ticket@3x.png');
-        background-size: 110px 510px;
-        background-position-x: 0;
-        margin: 0 auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-}
-
-.icon__ticket {
-    @extend %icon-ticket;
-
-    &--breast {
-
-        &:before,
-        &:after {
-            background-position-y: 0;
-        }
-    }
-
-    &--colorectal {
-
-        &:before,
-        &:after {
-            background-position-y: -170px;
-        }
-    }
-
-    &--lung {
-
-        &:before,
-        &:after {
-            background-position-y: -340px;
-        }
-    }
-}
-
 %icon-social {
     position: relative;
 
     &:before,
     &:after {
-        @include wh-square(50px);
-        background-image: url('../images/forum/icon_social@3x.png');
-        background-size: 50px 150px;
+        @include wh-square(44px);
+        background-image: url('../images/icon-gotop@3x.png');
+        background-size: 44px 44px;
         background-position-x: 0;
-        display: block;
-        position: absolute;
-        left: 0;
+    }
+}
+
+.icon__social {
+    @extend %icon-social;
+
+    &--gotop {
+
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
     }
 }
 
@@ -402,7 +224,7 @@
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
     .grid {
-       
+
     }
 }
 
