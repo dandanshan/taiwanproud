@@ -3,44 +3,44 @@
     position: relative;
 
     &__arrow {
-        width: 44px;
-        height: 44px;
+        // width: 44px;
+        // height: 44px;
 
-        &:before {
-            content: '';
-            display: block;
-            width: 44px;
-            height: 44px;
-            z-index: 20;
-            background-size: 44px 176px;
-            background-position-x: 0;
-            background-image: url('../images/icon-slide-arrow@3x.png');
-            opacity: 1;
-        }
+        // &:before {
+        //     content: '';
+        //     display: block;
+        //     width: 44px;
+        //     height: 44px;
+        //     z-index: 20;
+        //     background-size: 44px 176px;
+        //     background-position-x: 0;
+        //     background-image: url('../images/icon-slide-arrow@3x.png');
+        //     opacity: 1;
+        // }
 
-        &--dp {
-            &:before {
-                background-position-y: 0;
-            }
-        }
+        // &--dp {
+        //     &:before {
+        //         background-position-y: 0;
+        //     }
+        // }
 
-        &--dn {
-            &:before {
-                background-position-y: -44px;
-            }
-        }
+        // &--dn {
+        //     &:before {
+        //         background-position-y: -44px;
+        //     }
+        // }
 
-        &--lp {
-            &:before {
-                background-position-y: -88px;
-            }
-        }
+        // &--lp {
+        //     &:before {
+        //         background-position-y: -88px;
+        //     }
+        // }
 
-        &--ln {
-            &:before {
-                background-position-y: -132px;
-            }
-        }
+        // &--ln {
+        //     &:before {
+        //         background-position-y: -132px;
+        //     }
+        // }
 
     }
 

@@ -176,6 +176,48 @@
     }
 }
 
+%icon-arrow {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(44px);
+        background-image: url('../images/icon-slide-arrow@3x.png');
+        background-size: 44px 176px;
+        background-position-x: 0;
+        z-index: 20;
+        opacity: 1;
+    }
+}
+
+.icon__arrow  {
+    @extend %icon-arrow ;
+
+    &--dp {
+        &:before {
+            background-position-y: 0;
+        }
+    }
+
+    &--dn {
+        &:before {
+            background-position-y: -44px;
+        }
+    }
+
+    &--lp {
+        &:before {
+            background-position-y: -88px;
+        }
+    }
+
+    &--ln {
+        &:before {
+            background-position-y: -132px;
+        }
+    }
+}
+
 
 /*---------- alignment ----------*/
 .text-left {
