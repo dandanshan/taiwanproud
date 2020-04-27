@@ -1,63 +1,157 @@
 //slides
-.slides {
+.slick {
     position: relative;
+    @include list-reset;
 
-    &__arrow {
-        // width: 44px;
-        // height: 44px;
+    .slick-slide {
+        >div {
+            line-height: 0;
+        }
+    }
 
-        // &:before {
-        //     content: '';
-        //     display: block;
-        //     width: 44px;
-        //     height: 44px;
-        //     z-index: 20;
-        //     background-size: 44px 176px;
-        //     background-position-x: 0;
-        //     background-image: url('../images/icon-slide-arrow@3x.png');
-        //     opacity: 1;
-        // }
+    &__media {
+        position: relative;
+        margin: 0 auto;
+        overflow: hidden;
+        cursor: pointer;
 
-        // &--dp {
-        //     &:before {
-        //         background-position-y: 0;
-        //     }
-        // }
-
-        // &--dn {
-        //     &:before {
-        //         background-position-y: -44px;
-        //     }
-        // }
-
-        // &--lp {
-        //     &:before {
-        //         background-position-y: -88px;
-        //     }
-        // }
-
-        // &--ln {
-        //     &:before {
-        //         background-position-y: -132px;
-        //     }
-        // }
-
+        >img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1;
+            cursor: pointer;
+            @include transition(all, .3s, ease);
+        }
     }
 
     &--video {
-        padding: 0 55px;
+        .slick__item {
+            line-height: 1;
+            position: relative;
+            cursor: pointer;
 
-        .slick-prev {
-            left: 0;
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 20;
+                background-image: url('../images/icon-play@3x.png');
+                background-size: 65px 65px;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+                position: absolute;
+                cursor: pointer;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+            }
+        }
+        .slick__media {
+            width: 100%;
+            padding-top: 56%;
+            cursor: pointer;
         }
 
-        .slick-next {
-            right: 0;
+        .icon__arrow {
+            position: absolute;
+            top: calc(50%);
+            bottom: 0;
+            cursor: pointer;
+            z-index: 90;
+            @include wh-square(44px);
+
+            &--dp {
+                left: -74px;
+            }
+
+            &--dn {
+                right: 30px;
+            }
         }
     }
 
+    &--card {
+        .slick-list {
+            // margin-left: -300px;
+        }
+
+        .slick__media {
+            width: calc(100% - 100px);
+            padding-top: calc((100% - 100px) * 0.6);
+            background: $navy300;
+
+            img {
+
+                opacity: .7;
+            }
+
+        }
+
+        .slick-active {
+            .slick__media {
+                img {
+                    opacity: 1;
+                    @include transition(all, .6s, ease-in);
+                }
+            }
+        }
+
+        .icon__arrow {
+            position: absolute;
+            top: calc(50%);
+            bottom: 0;
+            cursor: pointer;
+            z-index: 90;
+            @include wh-square(44px);
+
+            &--dp {
+                left: 100px;
+            }
+
+            &--dn {
+                right: 100px;
+            }
+        }
+    }
+
+    &--article {
+        .slick__item {
+            margin-bottom: 50px;
+        }
+
+        .slick__media {
+            padding-top: 56%;
+        }
+
+        .icon__arrow {
+            position: absolute;
+            top: calc(50%);
+            bottom: 0;
+            cursor: pointer;
+            z-index: 90;
+            @include wh-square(44px);
+
+            &--lp {
+                left: -100px;
+            }
+
+            &--ln {
+                right: -100px;
+            }
+        }
+    }
+
+}
+.slides {
+    position: relative;
+
+    &__arrow {}
+
     &__dots {
         margin: 0;
+        bottom: -43px;
 
         li {
             margin: 0 7px;
@@ -87,9 +181,7 @@
 //sweetalert2
 .swal2-container {
 
-    .swal2-title {
-
-    }
+    .swal2-title {}
 }
 
 /* ==========================================================================
@@ -102,7 +194,30 @@
 @media only screen and (max-width: $screen-md) {}
 
 //Small devices (landscape tablets, 768 and down)
-@media only screen and (max-width: $screen-sm) {}
+@media only screen and (max-width: $screen-sm) {
+    .slick {
+        &--video {
+            .slick__item {
+
+                &:before {
+
+                }
+            }
+        }
+        &--card {
+            .slick-list {
+
+            }
+
+            .slick__media {
+                width: 100%;
+                padding-top: 60%;
+                background: $navy300;
+
+            }
+        }
+    }
+}
 
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {}
