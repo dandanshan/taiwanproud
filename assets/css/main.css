@@ -668,6 +668,7 @@ th {
   }
   .slick--video .slides__dots {
     text-align: center;
+    right: 0;
   }
   .slick--card .slick__media {
     width: 100%;
