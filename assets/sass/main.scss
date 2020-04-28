@@ -329,17 +329,17 @@ img {
         height: 430px;
         position: relative;
         margin: 0 auto;
-        // @include animation(fadeIn, .5s, 1, ease-in, 0);
+        @include animation(fadeIn, 1s, 1, ease-in, 0);
 
-        // @keyframes fadeIn {
-        //     from {
-        //         opacity: 0;
-        //     }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-        //     to {
-        //         opacity: 1;
-        //     }
-        // }
+            to {
+                opacity: 1;
+            }
+        }
 
         .topic {
             width: 344px;
@@ -453,9 +453,16 @@ img {
     }
 
     .section__title,
-    .section__content,
     .section__action {
+        padding-left: 115px;
+    }
+
+    .section__content {
         padding-left: 100px;
+
+        p {
+            margin-left: 15px;
+        }
     }
 
     .section__action {
@@ -532,7 +539,7 @@ img {
 }
 
 #map {
-    padding: 330px 0;
+    padding: 320px 0;
     overflow: hidden;
     position: relative;
 
@@ -894,6 +901,11 @@ img {
 
     .gotop {
         right: 10px;
+        bottom: 0;
+
+        &.active {
+            bottom: 50px;
+        }
     }
 
     #video {
@@ -949,7 +961,7 @@ img {
 
 
     #map {
-        padding-top: 330px;
+        padding: 180px 0 100px 0;
         overflow: hidden;
 
         h2,
@@ -965,7 +977,21 @@ img {
             width: 100%;
             order: 2;
             padding: 0;
+
+            .slick__desc {
+                .name {
+                    width: 100%;
+                }
+
+                p {
+                    width: 100%;
+                    margin: 15px 0;
+                }
+
+            }
         }
+
+
     }
 
     #motion {

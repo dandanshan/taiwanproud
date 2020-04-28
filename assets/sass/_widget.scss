@@ -1,4 +1,3 @@
-
 /*---------- grid ----------*/
 .grid {
     @include list-reset;
@@ -101,7 +100,7 @@
 
             border: 1px solid $navy300;
 
-            &:hover  {
+            &:hover {
                 &:after {
                     @include translateX(20px);
                     @include transition(all, .3s, ease-in);
@@ -120,7 +119,7 @@
         color: $navy200;
 
         &.icon__more {
-            &:hover  {
+            &:hover {
                 &:after {
                     @include translateX(20px);
                     @include transition(all, .3s, ease-in);
@@ -274,8 +273,8 @@
     }
 }
 
-.icon__arrow  {
-    @extend %icon-arrow ;
+.icon__arrow {
+    @extend %icon-arrow;
 
     &--dp {
         &:before {
@@ -318,10 +317,11 @@
     }
 }
 
-.icon__more  {
+.icon__more {
     @extend %icon-more;
 
     &--dark {
+
         &:before,
         &:after {
             background-position-y: 0;
@@ -329,6 +329,7 @@
     }
 
     &--middle {
+
         &:before,
         &:after {
             background-position-y: -16px;
@@ -336,6 +337,7 @@
     }
 
     &--light {
+
         &:before,
         &:after {
             background-position-y: -32px;
@@ -390,9 +392,7 @@
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {
-    .grid {
-
-    }
+    .grid {}
 }
 
 //Small devices (landscape tablets, 768 and down)

@@ -5,9 +5,11 @@ $(document).ready(function () {
 		$('.nav').toggleClass('active');
 	});
 
-	$('#goTop').click(function(){
-        $('html, body').animate({scrollTop: 0}, 1000);
-    });
+	$('#goTop').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
 
 	$(window).scroll(function () {
 		//header position
@@ -16,11 +18,11 @@ $(document).ready(function () {
 		$(window).scrollTop() > $('#home').outerHeight() ? $('.header').css('background', '#254460') : $('.header').css('background', 'transparent');
 
 		//go top show
-        if ( $(this).scrollTop() > 800){
-            $('#goTop, .gotop').addClass('active');
-        } else {
-            $('#goTop, .gotop').removeClass('active');
-        }
+		if ($(this).scrollTop() > 800) {
+			$('#goTop, .gotop').addClass('active');
+		} else {
+			$('#goTop, .gotop').removeClass('active');
+		}
 
 		var $target = $('#logotype .scroll');
 		var index = 0;
@@ -50,16 +52,14 @@ $(document).ready(function () {
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
 		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--dn" aria-label="Next" type="button"></button>',
 		dotsClass: 'slick-dots slides__dots',
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesPerRow: 1,
-					rows: 2,
-					arrows: false
-				}
-			},
-		]
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesPerRow: 1,
+				rows: 2,
+				arrows: false
+			}
+		}, ]
 	});
 
 	$('.slick--card').slick({
@@ -71,8 +71,7 @@ $(document).ready(function () {
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
 		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--dn" aria-label="Next" type="button"></button>',
 		dotsClass: 'slick-dots slides__dots',
-		responsive: [
-			{
+		responsive: [{
 				breakpoint: 1200,
 				settings: {
 					centerPadding: '120px',
@@ -100,8 +99,7 @@ $(document).ready(function () {
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--lp" aria-label="Previous" type="button"></button>',
 		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--ln" aria-label="Next" type="button"></button>',
 		dotsClass: 'slick-dots slides__dots',
-		responsive: [
-			{
+		responsive: [{
 				breakpoint: 992,
 				settings: {
 					slidesPerRow: 2,
@@ -128,8 +126,7 @@ $(document).ready(function () {
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
 		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--dn" aria-label="Next" type="button"></button>',
 		dotsClass: 'slick-dots slides__dots',
-		responsive: [
-			{
+		responsive: [{
 				breakpoint: 992,
 				settings: {
 					arrows: true
