@@ -15,7 +15,7 @@ $font-size-14: 0.875rem !default;
 $font-size-20: 1.25rem !default;
 $font-size-24: 1.5rem !default;
 $font-size-32: 2rem !default;
-$font-size-42: 2.5rem !default;
+$font-size-40: 2.5rem !default;
 
 $font-weight-light: 300 !default;
 $font-weight-normal: 400 !default;
@@ -39,6 +39,10 @@ $screen-desktop: $screen-md-min !default;
 $screen-lg: 1200px !default;
 $screen-lg-min: $screen-lg !default;
 $screen-lg-desktop: $screen-lg-min !default;
+// Extra Large screen / wide desktop
+$screen-xl: 1440px !default;
+$screen-xl-min: $screen-xl !default;
+$screen-xl-desktop: $screen-xl-min !default;
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max: ($screen-sm-min - 1) !default;
 $screen-sm-max: ($screen-md-min - 1) !default;

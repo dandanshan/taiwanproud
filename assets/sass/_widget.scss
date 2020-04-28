@@ -81,6 +81,55 @@
     }
 }
 
+
+/*---------- button ----------*/
+.btn {
+    position: relative;
+    box-sizing: border-box;
+
+    &--block {
+        padding: 12px 20px;
+        min-width: 230px;
+        text-align: center;
+        overflow: hidden;
+
+        .btn__text {
+            color: $navy300;
+        }
+
+        &.btn--dark {
+
+            border: 1px solid $navy300;
+
+            &:hover  {
+                &:after {
+                    @include translateX(20px);
+                    @include transition(all, .3s, ease-in);
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-size: $font-size-base;
+        display: inline-block;
+    }
+
+    &--textlink {
+        text-align: left;
+        color: $navy200;
+
+        &.icon__more {
+            &:hover  {
+                &:after {
+                    @include translateX(20px);
+                    @include transition(all, .3s, ease-in);
+                }
+            }
+        }
+    }
+}
+
 /*---------- icon ----------
  *	.icon:			使用:before (預設)
  *	.icon--a:		使用:after
@@ -249,6 +298,47 @@
     &--ln {
         &:before {
             background-position-y: -132px;
+        }
+    }
+}
+
+
+%icon-more {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(16px);
+        background-image: url('../images/icon-more-arrow@3x.png');
+        background-size: 16px 48px;
+        background-position-x: 0;
+        z-index: 20;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+}
+
+.icon__more  {
+    @extend %icon-more;
+
+    &--dark {
+        &:before,
+        &:after {
+            background-position-y: 0;
+        }
+    }
+
+    &--middle {
+        &:before,
+        &:after {
+            background-position-y: -16px;
+        }
+    }
+
+    &--light {
+        &:before,
+        &:after {
+            background-position-y: -32px;
         }
     }
 }

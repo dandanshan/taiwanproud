@@ -4,7 +4,7 @@
     @include list-reset;
 
     .slick-slide {
-        >div {
+        .slick__media {
             line-height: 0;
         }
     }
@@ -70,13 +70,14 @@
                 right: 30px;
             }
         }
+
+        .slides__dots{
+            text-align: right;
+            right: 30px;
+        }
     }
 
     &--card {
-        .slick-list {
-            // margin-left: -300px;
-        }
-
         .slick__media {
             width: calc(100% - 100px);
             padding-top: calc((100% - 100px) * 0.6);
@@ -84,7 +85,7 @@
 
             img {
 
-                opacity: .7;
+                opacity: .3;
             }
 
         }
@@ -107,16 +108,20 @@
             @include wh-square(44px);
 
             &--dp {
-                left: 100px;
+                left: 260px;
             }
 
             &--dn {
-                right: 100px;
+                right: 260px;
             }
         }
     }
 
     &--article {
+        .slick {
+            margin: 0 60px;
+        }
+
         .slick__item {
             margin-bottom: 50px;
         }
@@ -134,12 +139,64 @@
             @include wh-square(44px);
 
             &--lp {
-                left: -100px;
+                left: -85px;
             }
 
             &--ln {
-                right: -100px;
+                right: -85px;
             }
+        }
+    }
+
+    &--city {
+        .slick__item {
+            padding-bottom: 20px;
+        }
+
+        .slick__media {
+            width: 100%;
+            padding-top: 56%;
+            position: relative;
+
+            &:before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                z-index: 20;
+                background-image: url('../images/icon-play@3x.png');
+                background-size: 65px 65px;
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 1;
+                position: absolute;
+                cursor: pointer;
+                filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+                top: 0;
+            }
+        }
+
+        .slick__action {
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        .icon__arrow {
+            position: absolute;
+            top: calc(50%);
+
+            &--dp {
+                left: -60px;
+            }
+
+            &--dn {
+                right: -60px;
+            }
+        }
+
+        .slides__dots {
+            text-align: left;
+            bottom: 20px;
         }
     }
 
@@ -147,7 +204,9 @@
 .slides {
     position: relative;
 
-    &__arrow {}
+    &__arrow {
+        @include wh-square(44px);
+    }
 
     &__dots {
         margin: 0;
@@ -187,8 +246,37 @@
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+
+
 //Large devices (landscape tablets, 1200 and down)
-@media only screen and (max-width: $screen-lg) {}
+@media only screen and (max-width: $screen-lg) {
+    .slick {
+        &--article {
+            .icon__arrow {
+                &--lp {
+                    left: -45px;
+                }
+
+                &--ln {
+                    right: -45px;
+                }
+            }
+        }
+
+        &--card {
+            .icon__arrow {
+
+                &--dp {
+                    left: 100px;
+                }
+
+                &--dn {
+                    right: 100px;
+                }
+            }
+        }
+    }
+}
 
 //Medium devices (portrait tablets,landscape phone, 992 and down)
 @media only screen and (max-width: $screen-md) {}
@@ -215,6 +303,10 @@
                 background: $navy300;
 
             }
+        }
+
+        &--article {
+            margin: 0;
         }
     }
 }

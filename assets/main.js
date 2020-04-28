@@ -64,7 +64,7 @@ $(document).ready(function () {
 
 	$('.slick--card').slick({
 		centerMode: true,
-		centerPadding: '120px',
+		centerPadding: '280px',
 		// autoplay: true,
 		dots: true,
 		slidesToShow: 1,
@@ -72,6 +72,14 @@ $(document).ready(function () {
 		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--dn" aria-label="Next" type="button"></button>',
 		dotsClass: 'slick-dots slides__dots',
 		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					centerPadding: '120px',
+					slidesToShow: 1,
+					arrows: true
+				}
+			},
 			{
 				breakpoint: 768,
 				settings: {
@@ -94,10 +102,42 @@ $(document).ready(function () {
 		dotsClass: 'slick-dots slides__dots',
 		responsive: [
 			{
+				breakpoint: 992,
+				settings: {
+					slidesPerRow: 2,
+					rows: 2,
+					arrows: true
+				}
+			},
+			{
 				breakpoint: 768,
 				settings: {
-					centerPadding: '0px',
-					slidesToShow: 1,
+					slidesPerRow: 1,
+					rows: 2,
+					arrows: false
+				}
+			},
+		]
+	});
+
+	$('.slick--city').slick({
+		// autoplay: true,
+		dots: true,
+		slidesToShow: 1,
+		adaptiveHeight: true,
+		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
+		nextArrow: '<button class="slick-next slides__arrow icon icon--b icon__arrow icon__arrow--dn" aria-label="Next" type="button"></button>',
+		dotsClass: 'slick-dots slides__dots',
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					arrows: true
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
 					arrows: false
 				}
 			},
