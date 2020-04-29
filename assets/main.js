@@ -16,7 +16,7 @@ $(document).ready(function () {
 	});
 
 	$('.slick--video').slick({
-		// autoplay: true,
+		autoplay: true,
 		dots: true,
 		slidesPerRow: 3,
 		rows: 2,
@@ -36,7 +36,7 @@ $(document).ready(function () {
 	$('.slick--card').slick({
 		centerMode: true,
 		centerPadding: '280px',
-		// autoplay: true,
+		autoplay: true,
 		dots: true,
 		slidesToShow: 1,
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
@@ -62,7 +62,7 @@ $(document).ready(function () {
 	});
 
 	$('.slick--article').slick({
-		// autoplay: true,
+		autoplay: true,
 		dots: true,
 		slidesPerRow: 3,
 		rows: 2,
@@ -90,7 +90,7 @@ $(document).ready(function () {
 	});
 
 	$('.slick--city').slick({
-		// autoplay: true,
+		autoplay: true,
 		dots: true,
 		slidesToShow: 1,
 		adaptiveHeight: true,
