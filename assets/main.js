@@ -192,8 +192,24 @@ $(document).ready(function () {
 		}
 	}
 
-	$('#feedback').load(function () {
-		$('.form--feedback').height($(this).contents().height());
-	});
+
+	// $('#feedback').load(function () {
+	// 	var height = ($('#feedback').contents().height() - 150);
+
+	// 	$('.form--feedback').height();
+	// });
+
+	function setIframeHeight() {
+		var iframeid = document.getElementById('feedback'); //iframe id
+		if (document.getElementById) {
+			if (iframeid && !window.opera) {
+				if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+					iframeid.height = ((iframeid.contentDocument.body.offsetHeight) - 20);
+				} else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+					iframeid.height = ((iframeid.Document.body.scrollHeight) - 20);
+				}
+			}
+		}
+	}
 
 });

@@ -207,7 +207,6 @@
             width: 50%;
         }
     }
-
 }
 
 .slides {
@@ -257,7 +256,7 @@
         border: 2px solid $navy300;
         font-size: $font-size-base;
 
-        .grid li > div {
+        .grid li>div {
             background: $navy100;
             padding: 20px;
             min-height: 200px;
@@ -377,7 +376,6 @@
                 width: 100%;
                 padding-top: 60%;
                 background: $navy300;
-
             }
         }
 
@@ -390,7 +388,7 @@
 
         .vex-content {
 
-            .grid li > div {
+            .grid li>div {
                 min-height: unset;
             }
         }
