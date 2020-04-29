@@ -6,7 +6,7 @@
 	<meta http-equiv="Pragma" content="no-cache">
 	<title>安心台灣 │ 康健雜誌</title>
 	<meta name="description" content="這一代的我們，從沒有想過會遇上病毒肆虐的嚴峻考驗，過上一段漫長戴著口罩、在家工作、限制出門…的日子。但疫苗或新藥已現曙光，疫情終將過去，我們終究會一起度過難關。當大家回頭看這段經歷時，我們會記住什麼？在抗疫艱難時刻，我們共同為台灣做了一件事！">
-	<meta name="keywords" content="安心台灣,康健雜誌,康健,疫情,防疫,武漢肺炎,台灣,抗疫,口罩,新冠肺炎,新冠病毒">
+	<meta name="keywords" content="安心台灣,康健,疫情,防疫,武漢肺炎,台灣,抗疫,口罩,新冠病毒">
 	<meta name="copyright" content="本網頁著作權屬康健雜誌所有">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:type" content="website">
@@ -20,6 +20,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-wireframe.min.css">
 	<link href="./assets/css/main.min.css" rel="stylesheet">
 	<!-- Google Tag Manager -->
 	<script>
@@ -521,6 +523,10 @@
 				</div>
 			</div>
 		</footer>
+		<div class="wave">
+			<span>我要響應</span>
+			<div class="icon icon--b icon__hand"></div>
+		</div>
 		<div class="gotop">
 			<ul>
 				<li><a href="https://www.commonhealth.com.tw/2020/taiwanprou/index.html" class="icon icon--b icon__social icon__social--fb"></a></li>
@@ -532,21 +538,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bigpicture@2.3.1/dist/BigPicture.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
 	<script src="./assets/main.js"></script>
-	<script>
-		const svgPath = document.querySelectorAll('#logotype .path');
-
-		const svgText = anime({
-		targets: svgPath,
-		loop: true,
-		direction: 'alternate',
-		strokeDashoffset: [anime.setDashoffset, 0],
-		easing: 'easeInOutSine',
-		duration: 700,
-		delay: (el, i) => { return i * 500 }
-		});
-	</script>
 </body>
 
 </html>

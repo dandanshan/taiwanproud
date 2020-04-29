@@ -93,6 +93,7 @@ img {
 .container {
     position: relative;
     text-align: left;
+    z-index: 0;
 }
 
 .wrap {
@@ -269,6 +270,41 @@ img {
     p {
         font-size: $font-size-14;
         margin: 0;
+    }
+}
+
+.wave {
+    position: fixed;
+    right: 20px;
+    top: 500px;
+    display: none;
+    cursor: pointer;
+    z-index: 99;
+    @include transition(all, .6s, ease);
+
+    span {
+        color: $yellow300;
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .icon {
+        margin: 0 auto;
+    }
+
+    &:hover {
+        @include scale(1.2);
+    }
+}
+
+.dialog__content {
+    label {
+        margin-bottom: 15px;
+        display: block;
+        font-weight: $font-weight-bold;
+        color: $navy300;
     }
 }
 
@@ -899,12 +935,22 @@ img {
         padding: 90px 0;
     }
 
+    .wave {
+        top: unset;
+        bottom: 250px;
+        right: 10px;
+
+        span {
+            font-size: $font-size-14;
+        }
+    }
+
     .gotop {
         right: 10px;
-        bottom: 0;
+        bottom: -40px;
 
         &.active {
-            bottom: 50px;
+            bottom: 20px;
         }
     }
 

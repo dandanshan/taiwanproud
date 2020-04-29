@@ -246,10 +246,46 @@
     }
 }
 
-//sweetalert2
-.swal2-container {
+//vex
+.vex.vex-theme-wireframe {
 
-    .swal2-title {}
+    .vex-content {
+        width: 95%;
+        min-width: 350px;
+        max-width: 860px;
+        color: $black;
+        border: 2px solid $navy300;
+        font-size: $font-size-base;
+
+        .btn {
+            margin-top: 15px;
+            display: inline-block;
+        }
+    }
+
+    .vex-dialog-form {
+        .vex-dialog-message {
+            margin: 15px 0 30px 0;
+            color: $black;
+            font-size: $font-size-base;
+        }
+
+        .vex-dialog-input {
+            margin-bottom: 0;
+        }
+    }
+
+    .vex-close {
+        &:before {
+            color: $navy300;
+            line-height: 60px;
+            @include wh-square(60px);
+        }
+    }
+
+    .vex-dialog-buttons {
+        display: none;
+    }
 }
 
 /* ==========================================================================

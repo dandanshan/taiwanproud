@@ -10,72 +10,19 @@
         @include box-sizing(border-box);
     }
 
-    &--month {
+    &--wave {
         margin: 0 -30px;
 
         &>li {
-            width: (100%/3);
-            padding: 0 15px;
-            margin-bottom: 30px;
+            padding: 0 30px;
 
             &:first-child {
-                width: calc(100% / 3 * 2);
-                margin-left: calc(100% / 3);
+                width: 55%;
             }
-        }
-    }
 
-    &--topic {
-        margin: 0 -30px;
-
-        &>li {
-            width: (100%/3);
-            padding: 0 15px;
-            margin-bottom: 30px;
-        }
-
-        &.top {
-            li:first-child {
-                width: calc(100% / 3 * 2);
-                float: right;
+            &:last-child {
+                width: 45%;
             }
-        }
-    }
-
-    &--tp {
-        margin: 0 -15px;
-
-        &>li {
-            width: (100%/3);
-            padding: 0 15px;
-            margin-bottom: 25px;
-        }
-    }
-
-    &--buy {
-        margin: 0 -15px;
-
-        &>li {
-            width: (100%/3);
-            padding: 0 15px;
-        }
-    }
-
-    &--plan {
-        margin: 30px -15px 0 -15px;
-
-        &>li {
-            width: 50%;
-            padding: 0 15px;
-        }
-    }
-
-    &--info {
-        margin: 0 -15px;
-
-        &>li {
-            width: 50%;
-            padding: 0 15px;
         }
     }
 }
@@ -97,8 +44,7 @@
         }
 
         &.btn--dark {
-
-            border: 1px solid $navy300;
+            border: 2px solid $navy300;
 
             &:hover {
                 &:after {
@@ -345,6 +291,35 @@
     }
 }
 
+%icon-hand {
+    position: relative;
+
+    &:before,
+    &:after {
+        @include wh-square(50px);
+        background-image: url('../images/icon-hand@3x.png');
+        background-size: 50px 50px;
+        background-position-x: 0;
+    }
+}
+
+.icon__hand {
+    @extend %icon-hand;
+    transform-origin: 70% 70%;
+    display: inline-block;
+    @include animation(wave, 2.5s, infinite, ease-in, 0);
+
+    @keyframes wave {
+        0% { transform: rotate(  0.0deg) }
+        10% { transform: rotate(-10.0deg) }
+        20% { transform: rotate( 12.0deg) }
+        30% { transform: rotate(-10.0deg) }
+        40% { transform: rotate(  9.0deg) }
+        50% { transform: rotate(  0.0deg) }
+        100% { transform: rotate(  0.0deg) }
+    }
+}
+
 
 /*---------- alignment ----------*/
 .text-left {
@@ -396,7 +371,27 @@
 }
 
 //Small devices (landscape tablets, 768 and down)
-@media only screen and (max-width: $screen-sm) {}
+@media only screen and (max-width: $screen-sm) {
+    .grid {
+
+        &--wave {
+            margin: 0 -30px;
+
+            &>li {
+                padding: 0 30px;
+
+                &:first-child {
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 
 //XSmall devices (portrait phones, 576 and down)
 @media only screen and (max-width: $screen-xs) {}
