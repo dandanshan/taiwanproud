@@ -115,11 +115,11 @@
             @include wh-square(44px);
 
             &--dp {
-                left: 260px;
+                left: calc(20% - 25px);
             }
 
             &--dn {
-                right: 260px;
+                right: calc(20% - 25px);
             }
         }
     }
@@ -257,6 +257,12 @@
         border: 2px solid $navy300;
         font-size: $font-size-base;
 
+        .grid li > div {
+            background: $navy100;
+            padding: 20px;
+            min-height: 200px;
+        }
+
         .btn {
             margin-top: 15px;
             display: inline-block;
@@ -291,7 +297,24 @@
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+//XLarge devices (landscape tablets, 1440 and down)
+@media only screen and (max-width: $screen-xl) {
+    .slick {
 
+        &--card {
+            .icon__arrow {
+
+                &--dp {
+                    left: calc(15% - 20px);
+                }
+
+                &--dn {
+                    right: calc(15% - 20px);
+                }
+            }
+        }
+    }
+}
 
 //Large devices (landscape tablets, 1200 and down)
 @media only screen and (max-width: $screen-lg) {
@@ -360,6 +383,16 @@
 
         &--article {
             margin: 0;
+        }
+    }
+
+    .vex.vex-theme-wireframe {
+
+        .vex-content {
+
+            .grid li > div {
+                min-height: unset;
+            }
         }
     }
 }

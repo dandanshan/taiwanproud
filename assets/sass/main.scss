@@ -351,7 +351,7 @@ img {
         position: absolute;
         top: -150px;
         left: 0;
-        height: 170px;
+        height: 200px;
         width: 100%;
         background: url('../images/bg-curve_01.svg') no-repeat bottom left;
         background-size: 105%;
@@ -373,9 +373,9 @@ img {
     &#article:before {
         content: '';
         position: absolute;
-        bottom: -270px;
+        bottom: -280px;
         left: 0;
-        height: 280px;
+        height: 300px;
         width: 100%;
         background: url('../images/bg-curve_03.svg') no-repeat top left;
         background-size: 105%;
@@ -385,9 +385,9 @@ img {
     &#motion:before {
         content: '';
         position: absolute;
-        top: -260px;
+        top: -275px;
         left: 0;
-        height: 280px;
+        height: 300px;
         width: 100%;
         background: url('../images/bg-curve_03.svg') no-repeat top left;
         background-size: 105%;
@@ -521,6 +521,11 @@ img {
         max-width: 670px;
         margin: 0 auto;
         position: relative;
+
+        p {
+            font-size: $font-size-20;
+            line-height: 1.8;
+        }
     }
 }
 
@@ -568,7 +573,7 @@ img {
     }
 
     .section__title {
-        padding-left: 330px;
+        padding-left: calc(20% + 50px);
     }
 }
 
@@ -738,6 +743,31 @@ img {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+//XLarge devices (landscape tablets, 1440 and down)
+@media only screen and (max-width: $screen-xl) {
+    #card {
+        position: relative;
+        z-index: 0;
+
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 200px;
+            width: 100%;
+            background: $navy300;
+            background-size: 100%;
+            z-index: -1;
+        }
+
+        .section__title {
+            padding-left: calc(15% + 50px);
+        }
+    }
+}
 //Large devices (landscape tablets, 1200 and down)
 @media only screen and (max-width: $screen-lg) {
     .wrap {
