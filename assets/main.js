@@ -196,5 +196,4 @@ $(document).ready(function () {
 			$('#goTop, .gotop').removeClass('active');
 		}
 	}
-
 });

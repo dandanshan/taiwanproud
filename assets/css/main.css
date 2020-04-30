@@ -723,6 +723,7 @@ th {
   .slick--video .slides__dots {
     text-align: center;
     right: 0;
+    left: 0;
     bottom: -150px;
   }
   .slick--video .section__action {
