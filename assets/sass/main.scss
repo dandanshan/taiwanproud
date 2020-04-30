@@ -416,6 +416,7 @@ img {
         height: 430px;
         position: relative;
         margin: 0 auto;
+        @include scale(1.2);
         @include animation(fadeIn, 1s, 1, ease-in, 0);
 
         @keyframes fadeIn {
@@ -739,6 +740,17 @@ img {
    ========================================================================== */
 //XLarge devices (landscape tablets, 1440 and down)
 @media only screen and (max-width: $screen-xl) {
+    #home {
+        height: 100vh;
+        padding: 0;
+        position: relative;
+        overflow: hidden;
+        background: url('../images/landing.png') no-repeat top center/cover;
+
+        #logotype {
+            @include scale(1);
+        }
+    }
     #card {
         position: relative;
         z-index: 0;
