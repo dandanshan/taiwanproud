@@ -488,6 +488,7 @@ th {
 .slick--video .slides__dots {
   text-align: left;
   left: 10px;
+  width: auto;
 }
 
 .slick--video .slick-slide > div:nth-child(odd) {
