@@ -486,8 +486,8 @@ th {
 }
 
 .slick--video .slides__dots {
-  text-align: right;
-  right: 30px;
+  text-align: left;
+  left: 10px;
 }
 
 .slick--video .slick-slide > div:nth-child(odd) {
@@ -723,7 +723,7 @@ th {
   .slick--video .slides__dots {
     text-align: center;
     right: 0;
-    bottom: -110px;
+    bottom: -150px;
   }
   .slick--video .section__action {
     margin-top: 80px;
@@ -1409,7 +1409,7 @@ img {
 .wave {
   position: fixed;
   right: 20px;
-  top: 500px;
+  bottom: 65%;
   display: none;
   cursor: pointer;
   z-index: 99;
@@ -1545,6 +1545,14 @@ img {
 }
 
 #home h1 {
+  height: 0;
+  width: 0;
+  text-indent: -9999px;
+  color: transparent;
+  font-size: 0;
+}
+
+#home .home {
   position: absolute;
   left: 0;
   right: 0;
@@ -1709,7 +1717,7 @@ img {
 }
 
 #video .section__action {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 #video .slick {
@@ -2140,7 +2148,7 @@ img {
     height: 240px;
   }
   .section#article:before {
-    bottom: -270px;
+    bottom: -275px;
     height: 280px;
   }
   .section#motion:before {
@@ -2162,7 +2170,7 @@ img {
     margin-left: 0;
   }
   #video .section__action {
-    padding: 90px 0 0 0;
+    padding: 130px 0 0 0;
     text-align: center;
   }
   #video .swiper--container:after {

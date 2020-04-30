@@ -276,7 +276,7 @@ img {
 .wave {
     position: fixed;
     right: 20px;
-    top: 500px;
+    bottom: 65%;
     display: none;
     cursor: pointer;
     z-index: 99;
@@ -404,6 +404,14 @@ img {
     background: url('../images/landing.png') no-repeat top center/cover;
 
     h1 {
+        height: 0;
+        width: 0;
+        text-indent: -9999px;
+        color: transparent;
+        font-size: 0;
+    }
+
+    .home {
         position: absolute;
         left: 0;
         right: 0;
@@ -546,7 +554,7 @@ img {
     }
 
     .section__action {
-        margin-top: 40px;
+        margin-top: 60px;
     }
 
     .slick {
@@ -1004,7 +1012,7 @@ img {
         }
 
         &#article:before {
-            bottom: -270px;
+            bottom: -275px;
             height: 280px;
         }
 
@@ -1037,7 +1045,7 @@ img {
         }
 
         .section__action {
-            padding: 90px 0 0 0;
+            padding: 130px 0 0 0;
             text-align: center;
         }
 

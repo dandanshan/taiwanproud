@@ -4,6 +4,11 @@ $(document).ready(function () {
 	waveShow();
 	goTopShow();
 
+	// build video data
+	$.each(data, function (index, value) {
+		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '"></div></li>');
+    });
+
 	$('.burger').click(function () {
 		$(this).toggleClass('active');
 		$('.nav').toggleClass('active');
@@ -14,11 +19,6 @@ $(document).ready(function () {
 			scrollTop: 0
 		}, 1000);
 	});
-
-	// build video data
-	$.each(data, function (index, value) {
-		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '"></div></li>');
-    });
 
 	$('.slick--video').slick({
 		autoplay: true,
@@ -194,19 +194,6 @@ $(document).ready(function () {
 			$('#goTop, .gotop').addClass('active');
 		} else {
 			$('#goTop, .gotop').removeClass('active');
-		}
-	}
-
-	function setIframeHeight() {
-		var iframeid = document.getElementById('feedback'); //iframe id
-		if (document.getElementById) {
-			if (iframeid && !window.opera) {
-				if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
-					iframeid.height = ((iframeid.contentDocument.body.offsetHeight) - 20);
-				} else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
-					iframeid.height = ((iframeid.Document.body.scrollHeight) - 20);
-				}
-			}
 		}
 	}
 

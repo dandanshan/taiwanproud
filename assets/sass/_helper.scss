@@ -77,8 +77,8 @@
         }
 
         .slides__dots {
-            text-align: right;
-            right: 30px;
+            text-align: left;
+            left: 10px;
         }
 
         .slick-slide {
@@ -370,7 +370,7 @@
             .slides__dots {
                 text-align: center;
                 right: 0;
-                bottom: -110px;
+                bottom: -150px;
             }
 
             .section__action {
