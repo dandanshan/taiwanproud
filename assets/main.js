@@ -15,6 +15,11 @@ $(document).ready(function () {
 		}, 1000);
 	});
 
+	// build video data
+	$.each(data, function (index, value) {
+		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '"></div></li>');
+    });
+
 	$('.slick--video').slick({
 		autoplay: true,
 		dots: true,
@@ -191,13 +196,6 @@ $(document).ready(function () {
 			$('#goTop, .gotop').removeClass('active');
 		}
 	}
-
-
-	// $('#feedback').load(function () {
-	// 	var height = ($('#feedback').contents().height() - 150);
-
-	// 	$('.form--feedback').height();
-	// });
 
 	function setIframeHeight() {
 		var iframeid = document.getElementById('feedback'); //iframe id
