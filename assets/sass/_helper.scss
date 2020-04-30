@@ -4,6 +4,10 @@
     @include list-reset;
 
     .slick-slide {
+        .slick__item {
+            vertical-align: top;
+        }
+
         .slick__media {
             line-height: 0;
         }
@@ -366,6 +370,11 @@
             .slides__dots {
                 text-align: center;
                 right: 0;
+                bottom: -110px;
+            }
+
+            .section__action {
+                margin-top: 80px;
             }
         }
 

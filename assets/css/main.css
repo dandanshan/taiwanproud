@@ -411,6 +411,10 @@ th {
   list-style: none;
 }
 
+.slick .slick-slide .slick__item {
+  vertical-align: top;
+}
+
 .slick .slick-slide .slick__media {
   line-height: 0;
 }
@@ -719,6 +723,10 @@ th {
   .slick--video .slides__dots {
     text-align: center;
     right: 0;
+    bottom: -110px;
+  }
+  .slick--video .section__action {
+    margin-top: 80px;
   }
   .slick--card .slick__media {
     width: 100%;
@@ -2116,6 +2124,29 @@ img {
   .gotop.active {
     bottom: 20px;
   }
+  .section#intro {
+    padding: 110px 0 140px 0;
+  }
+  .section#video:before {
+    top: -195px;
+    height: 200px;
+  }
+  .section#card:before {
+    bottom: 190px;
+    height: 240px;
+  }
+  .section#article:before {
+    bottom: -270px;
+    height: 280px;
+  }
+  .section#motion:before {
+    position: absolute;
+    top: -275px;
+    height: 280px;
+  }
+  #card .section__title {
+    padding-left: 170px;
+  }
   #video .section__title,
   #video p {
     padding: 0 30px;
@@ -2127,7 +2158,7 @@ img {
     margin-left: 0;
   }
   #video .section__action {
-    padding: 60px 0 0 0;
+    padding: 90px 0 0 0;
     text-align: center;
   }
   #video .swiper--container:after {

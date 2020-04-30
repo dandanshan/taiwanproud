@@ -988,6 +988,38 @@ img {
         }
     }
 
+    .section {
+        &#intro {
+            padding: 110px 0 140px 0;
+        }
+        &#video:before {
+            top: -195px;
+            height: 200px;
+        }
+
+        &#card:before {
+            bottom: 190px;
+            height: 240px;
+        }
+
+        &#article:before {
+            bottom: -270px;
+            height: 280px;
+        }
+
+        &#motion:before {
+            position: absolute;
+            top: -275px;
+            height: 280px;
+        }
+    }
+
+    #card {
+        .section__title {
+            padding-left: 170px;
+        }
+    }
+
     #video {
 
         .section__title,
@@ -1004,7 +1036,7 @@ img {
         }
 
         .section__action {
-            padding: 60px 0 0 0;
+            padding: 90px 0 0 0;
             text-align: center;
         }
 
