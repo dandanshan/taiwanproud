@@ -1526,9 +1526,9 @@ img {
 .section#motion:before {
   content: '';
   position: absolute;
-  top: -275px;
+  top: -300px;
   left: 0;
-  height: 300px;
+  height: 350px;
   width: 100%;
   background: url("../images/bg-curve_03.svg") no-repeat top left;
   background-size: 110%;
