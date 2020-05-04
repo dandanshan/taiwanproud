@@ -21,8 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-wireframe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/3.0.0/css/vex.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/css/vex-theme-wireframe.min.css" media="print" onload="this.media='all'">
     <link href="./assets/css/main.min.css" rel="stylesheet">
     <!-- Google Tag Manager -->
     <script>
@@ -42,51 +42,6 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MCMN77');
     </script>
     <!-- End Google Tag Manager -->
-    <!-- feversocial -->
-    <script id="fe-plugin">
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.setAttribute('lazy', 'true');
-            var host = ('https:' == document.location.protocol ?
-                'https://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com' :
-                'http://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com');
-            host = host +
-                '/fever-sdk.js?domain=campaign.commonhealth.com.tw&promoid=140&sponsorid=3&ptype=join&scheme=0&width=100%&uri=campaign.commonhealth.com.tw&hasFrameBorder=1';
-            js.src = host;
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'fever-jssdk'));
-    </script>
-    <!-- End feversocial -->
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '153319238642910');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=153319238642910&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -555,6 +510,51 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js"></script>
     <script src="./assets/data.js"></script>
     <script src="./assets/main.min.js"></script>
+    <!-- feversocial -->
+    <script id="fe-plugin">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.setAttribute('lazy', 'true');
+            var host = ('https:' == document.location.protocol ?
+                'https://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com' :
+                'http://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com');
+            host = host +
+                '/fever-sdk.js?domain=campaign.commonhealth.com.tw&promoid=140&sponsorid=3&ptype=join&scheme=0&width=100%&uri=campaign.commonhealth.com.tw&hasFrameBorder=1';
+            js.src = host;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'fever-jssdk'));
+    </script>
+    <!-- End feversocial -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '153319238642910');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=153319238642910&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 </body>
 
 </html>
