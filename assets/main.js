@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 	// build video data
 	$.each(data, function (index, value) {
-		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '"></div></li>');
+		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img data-src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '" class="lazyload"></div></li>');
     });
 
 	$('.burger').click(function () {
