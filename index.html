@@ -48,6 +48,51 @@
         })(window, document, 'script', 'dataLayer', 'GTM-MCMN77');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- feversocial -->
+    <script id="fe-plugin">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.setAttribute('lazy', 'true');
+            var host = ('https:' == document.location.protocol ?
+                'https://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com' :
+                'http://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com');
+            host = host +
+                '/fever-sdk.js?domain=campaign.commonhealth.com.tw&promoid=140&sponsorid=3&ptype=join&scheme=0&width=100%&uri=campaign.commonhealth.com.tw&hasFrameBorder=1';
+            js.src = host;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'fever-jssdk'));
+    </script>
+    <!-- End feversocial -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '153319238642910');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=153319238642910&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -211,6 +256,30 @@
                     <div class="section__content">
                         <ul class="slick slick--article">
                             <li class="slick__item">
+                                <a href="https://bit.ly/2xwG0zM" target="_blank">
+                                    <div class="slick__media">
+                                        <img data-src="./assets/images/article_03.png" class="lazyload">
+                                    </div>
+                                    <p class="light">丸莊醬油 百年來始終「對得起」社會大眾</p>
+                                </a>
+                            </li>
+                            <li class="slick__item">
+                                <a href="https://bit.ly/2z6JCsX" target="_blank">
+                                    <div class="slick__media">
+                                        <img data-src="./assets/images/article_04.png" class="lazyload">
+                                    </div>
+                                    <p class="light">大井用心，用水安心</p>
+                                </a>
+                            </li>
+                            <li class="slick__item">
+                                <a href="https://bit.ly/3bZXRhD" target="_blank">
+                                    <div class="slick__media">
+                                        <img data-src="./assets/images/article_05.png"class="lazyload">
+                                    </div>
+                                    <p class="light">來全聯買進美好生活</p>
+                                </a>
+                            </li>
+                            <li class="slick__item">
                                 <a href="https://bit.ly/3f4GHkL" target="_blank">
                                     <div class="slick__media">
                                         <img data-src="./assets/images/article_01.png" class="lazyload">
@@ -250,7 +319,6 @@
                                     <p class="light">1分鐘玩測驗　身心療癒指南　找回安定力量</p>
                                 </a>
                             </li>
-
                             <li class="slick__item">
                                 <a href="https://campaign.commonhealth.com.tw/main/CH2020-healthy-356" target="_blank">
                                     <div class="slick__media">
@@ -259,7 +327,6 @@
                                     <p class="light">打造天生好體質　提升抵抗力飲食生活對策</p>
                                 </a>
                             </li>
-                            <!--
                             <li class="slick__item">
                                 <a href="https://campaign.commonhealth.com.tw/main/CH-Virus-353" target="_blank">
                                     <div class="slick__media">
@@ -268,7 +335,6 @@
                                     <p class="light">獨家授權　陳建仁談人類與病毒的戰爭</p>
                                 </a>
                             </li>
-
                             <li class="slick__item">
 								<a href="https://campaign.commonhealth.com.tw/main/2019-nCoV-350" target="_blank">
 									<div class="slick__media">
@@ -284,7 +350,8 @@
 									</div>
 									<p class="light">武漢肺炎蔓延中　該如何預防？一次看懂新型 、SARS、MERS的差別</p>
 								</a>
-							</li>
+                            </li>
+                            <!--
 							<li class="slick__item">
 								<a href="https://campaign.commonhealth.com.tw/main/Abundance-2020-335" target="_blank">
 									<div class="slick__media">
@@ -515,51 +582,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vex-js/4.1.0/js/vex.combined.min.js" defer></script>
     <script src="./assets/data.js" defer></script>
     <script src="./assets/main.min.js" defer></script>
-    <!-- feversocial -->
-    <script id="fe-plugin">
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.setAttribute('lazy', 'true');
-            var host = ('https:' == document.location.protocol ?
-                'https://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com' :
-                'http://s3-ap-southeast-1.amazonaws.com/widget.feversocial.com');
-            host = host +
-                '/fever-sdk.js?domain=campaign.commonhealth.com.tw&promoid=140&sponsorid=3&ptype=join&scheme=0&width=100%&uri=campaign.commonhealth.com.tw&hasFrameBorder=1';
-            js.src = host;
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'fever-jssdk'));
-    </script>
-    <!-- End feversocial -->
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '153319238642910');
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=153319238642910&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Facebook Pixel Code -->
 </body>
 
 </html>
