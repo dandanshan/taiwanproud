@@ -645,7 +645,7 @@ th {
   position: relative;
   text-align: left;
   left: 10px;
-  width: auto;
+  width: calc(100% - 40px);
   bottom: unset;
 }
 
