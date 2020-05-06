@@ -485,12 +485,6 @@ th {
   right: 30px;
 }
 
-.slick--video .slides__dots {
-  text-align: left;
-  left: 10px;
-  width: auto;
-}
-
 .slick--video .slick-slide > div:nth-child(odd) {
   margin-bottom: 30px;
 }
@@ -647,6 +641,14 @@ th {
   background: #f6b633;
 }
 
+#video .slides__dots {
+  position: relative;
+  text-align: left;
+  left: 10px;
+  width: auto;
+  bottom: unset;
+}
+
 .vex.vex-theme-wireframe .vex-content {
   width: 95%;
   min-width: 350px;
@@ -725,7 +727,6 @@ th {
     text-align: center;
     right: 0;
     left: 0;
-    bottom: -150px;
   }
   .slick--video .section__action {
     margin-top: 80px;
@@ -737,6 +738,14 @@ th {
   }
   .slick--article {
     margin: 0;
+  }
+  #video .slides__dots {
+    text-align: center;
+    left: unset;
+    right: unset;
+  }
+  #video .slides__dots .slides__dots {
+    display: inline;
   }
   .vex.vex-theme-wireframe .vex-content .grid li > div {
     min-height: unset;
@@ -779,8 +788,19 @@ th {
   width: 55%;
 }
 
-.grid--wave > li:last-child {
+.grid--wave > li:nth-child(2) {
   width: 45%;
+}
+
+.grid--wave > li:nth-child(3) {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.grid--wave > li:nth-child(3) a {
+  color: #254460;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 /*---------- button ----------*/
@@ -1129,10 +1149,14 @@ th {
   }
   .grid--wave > li:first-child {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  .grid--wave > li:last-child {
+  .grid--wave > li:nth-child(2) {
     width: 100%;
+  }
+  .grid--wave > li:nth-child(3) {
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
@@ -1719,7 +1743,7 @@ img {
 }
 
 #video .section__action {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 #video .slick {
@@ -1859,10 +1883,11 @@ img {
 
 #team {
   padding: 10px 20px;
-  color: #ffffff;
+  color: #254460;
   font-size: 0.875rem;
   text-align: center;
   line-height: 1.5;
+  background: #d7dee4;
 }
 
 #team span {
@@ -1871,9 +1896,12 @@ img {
 }
 
 #sponsor .sponsor__group {
-  margin-bottom: 30px;
   padding: 0 30px;
   text-align: center;
+}
+
+#sponsor .sponsor__group:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 #sponsor .sponsor__group label {
@@ -2172,7 +2200,7 @@ img {
     margin-left: 0;
   }
   #video .section__action {
-    padding: 130px 0 0 0;
+    padding: 0;
     text-align: center;
   }
   #video .swiper--container:after {
@@ -2222,5 +2250,8 @@ img {
     width: 100%;
     max-width: 790px;
     height: 430px;
+  }
+  #comment, #sponsor {
+    padding: 40px 0;
   }
 }

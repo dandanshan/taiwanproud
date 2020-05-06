@@ -20,8 +20,19 @@
                 width: 55%;
             }
 
-            &:last-child {
+            &:nth-child(2) {
                 width: 45%;
+            }
+
+            &:nth-child(3) {
+                width: 100%;
+                margin-top: 20px;
+
+                a {
+                    color: $navy300;
+                    font-weight: $font-weight-bold;
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -402,11 +413,16 @@
 
                 &:first-child {
                     width: 100%;
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                 }
 
-                &:last-child {
+                &:nth-child(2) {
                     width: 100%;
+                }
+
+                &:nth-child(3) {
+                    width: 100%;
+                    margin-top: 10px;
                 }
             }
         }

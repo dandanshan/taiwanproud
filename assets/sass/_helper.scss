@@ -76,12 +76,6 @@
             }
         }
 
-        .slides__dots {
-            text-align: left;
-            left: 10px;
-            width: auto;
-        }
-
         .slick-slide {
             >div:nth-child(odd) {
                 margin-bottom: 30px;
@@ -250,6 +244,16 @@
     }
 }
 
+#video {
+    .slides__dots {
+        position: relative;
+        text-align: left;
+        left: 10px;
+        width: auto;
+        bottom: unset;
+    }
+}
+
 //vex
 .vex.vex-theme-wireframe {
 
@@ -372,7 +376,6 @@
                 text-align: center;
                 right: 0;
                 left: 0;
-                bottom: -150px;
             }
 
             .section__action {
@@ -392,6 +395,18 @@
 
         &--article {
             margin: 0;
+        }
+    }
+
+    #video {
+        .slides__dots {
+            text-align: center;
+            left: unset;
+            right: unset;
+
+            .slides__dots {
+                display: inline;
+            }
         }
     }
 

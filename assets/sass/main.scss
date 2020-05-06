@@ -554,7 +554,7 @@ img {
     }
 
     .section__action {
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
     .slick {
@@ -687,10 +687,11 @@ img {
 
 #team {
     padding: 10px 20px;
-    color: $white;
+    color: $navy300;
     font-size: $font-size-14;
     text-align: center;
     line-height: 1.5;
+    background: $navy100;
 
     span {
         display: inline-block;
@@ -700,9 +701,12 @@ img {
 
 #sponsor {
     .sponsor__group {
-        margin-bottom: 30px;
         padding: 0 30px;
         text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
 
         label {
             font-size: $font-size-base;
@@ -1045,7 +1049,7 @@ img {
         }
 
         .section__action {
-            padding: 130px 0 0 0;
+            padding: 0;
             text-align: center;
         }
 
@@ -1122,6 +1126,10 @@ img {
                 height: 430px;
             }
         }
+    }
+
+    #comment, #sponsor {
+        padding: 40px 0;
     }
 }
 
