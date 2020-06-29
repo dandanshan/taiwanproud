@@ -142,7 +142,7 @@ $(document).ready(function () {
 	$('.wave').click(function () {
 		vex.dialog.alert({
 			message: '台灣讓人安心，是很多人的努力面對未來，邀請你串連正面的力量，為台灣做一件事!',
-			input: '<div class="dialog__content"><ul class="grid grid--wave"><li><div><label>響應方法 A</label><ul><li>step1：在 A4 紙上寫下「#安心台灣運動，我願意__ 」</li><li>step2：手拿宣言錄一段15秒影片，或拍一張照片</li><li>step3：上傳影片/照片到FB或IG，並@好友接力響應</li></ul></div></li><li><div><label>響應方法 B</label><p>在網站上留下您的宣言，與大家分享！</p><a href="#motion" class="btn btn--block btn--dark icon icon--a icon__more icon__dark"><span class="btn__text">立即響應</span></a></div></li><li><div><label>響應方法 C</label><p>請將拍好的影片/照片寄送到以下信箱：</p><a href="mailto:junyouli@cw.com.tw" class="">junyouli@cw.com.tw</a><p>※ 感謝您參加響應 #安心臺灣運動，回傳影片即代表同意《康健雜誌》之影音與肖像使用權。</p></div></li></ul></div>',
+			input: '<div class="dialog__content"><ul class="grid grid--wave"><li><div><label>響應方法 A</label><ul><li>step1：在 A4 紙上寫下「#安心台灣運動，我願意__ 」</li><li>step2：手拿宣言錄一段15秒影片，或拍一張照片</li><li>step3：上傳影片/照片到FB或IG，並@好友接力響應</li></ul></div></li><li><div><label>響應方法 B</label><p>在網站上留下您的宣言，與大家分享！</p><a href="#motion" class="btn btn--block btn--dark icon icon--a icon__more icon__dark"><span class="btn__text">立即響應</span></a></div></li><li><div><label>響應方法 C</label><p>請將拍好的影片/照片寄送到以下信箱：</p><a href="mailto:junyouli@cw.com.tw" class="">chadmin@cw.com.tw</a><p>※ 感謝您參加響應 #安心臺灣運動，回傳影片即代表同意《康健雜誌》之影音與肖像使用權。</p></div></li></ul></div>',
 		})
 	});
 
