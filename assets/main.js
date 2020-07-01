@@ -4,6 +4,23 @@ $(document).ready(function () {
 	waveShow();
 	goTopShow();
 
+	AOS.init();
+
+	document.addEventListener('aos:in', ({ detail }) => {
+
+		$('#intro .counter span').each(function () {
+			$(this).prop('Counter',0).animate({
+				  Counter: $(this).text()
+			}, {
+				duration: 2000,
+				easing: 'swing',
+				step: function (now) {
+					$(this).text(Math.ceil(now));
+				}
+			});
+		});
+	});
+
 	// build video data
 	$.each(data, function (index, value) {
 		$('.slick--video').append('<li class="slick__item"><div class="slick__media"><img data-src="https://i1.ytimg.com/vi/' + value.code + '/maxresdefault.jpg" data-url="' + value.code + '" class="lazyload"></div></li>');
