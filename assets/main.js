@@ -39,7 +39,7 @@ $(document).ready(function () {
 
 	$('.slick--video').slick({
 		autoplay: true,
-		dots: true,
+		dots: false,
 		slidesPerRow: 3,
 		rows: 2,
 		prevArrow: '<button class="slick-prev slides__arrow icon icon--b icon__arrow icon__arrow--dp" aria-label="Previous" type="button"></button>',
